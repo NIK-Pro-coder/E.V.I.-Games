@@ -1,24 +1,83 @@
+<!-- views/games.ejs -->
+
 <%- include('partials/head'); %>
+
+<%- include('partials/body-div_opening'); %>
 
 <%- include('partials/header'); %>
 
-<main>
-  <div class="jumbotron">
+<div class="row pt-3 pb-5">
+  <div class="col"></div>
+  
+  <div class="col-sm-10">
     <h1>Games by E.V.I.</h1>
-    <h2 class="ms-3 bg-dark text-white">Song Dash</h2>
-    <h3 class="ms-5">Released, 2 copies sold</h3>
-    <h2 class="ms-3 bg-dark text-white">Mistery Lane</h2>
-    <h3 class="ms-5">On hold</h3>
-    <h2 class="ms-3 bg-dark text-white">Spring Rain</h2>
-    <h3 class="ms-5">Abandoned in late development, possibly haunted</h3>
-    <h2 class="ms-3 bg-dark text-white">Last Memories</h2>
-    <h3 class="ms-5">Abandoned in early development, possibly haunted</h3>
-    <h2 class="ms-1 bg-dark text-white">Future games to be added</h2>
+    <br>
+
+      <!-- BS Carousel to choose Twitter user and pass it on as post-->
+      <div id="userCarousel" class="carousel carousel slide is-static" data-bs-interval="false">
+      
+      <!-- Indicators/dots -->
+      <div class="carousel-indicators">
+          <button type="button" data-bs-target="#userCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#userCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#userCarousel" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#userCarousel" data-bs-slide-to="3"></button>
+      </div>
+  
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/SongDash.png" alt="Game 1" class="d-block mx-auto" style="height:30vh">
+            <div class="carousel-caption user-carousel-caption">
+              <h5>Song Dash</h5>
+              <p>Released, 2 copies sold</p>
+              <a href="https://team-bean.itch.io/song-dash" target="_blank" rel="noopener noreferrer" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Go to Itch.io page</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/NotFound.png" alt="Game 1" class="d-block mx-auto" style="height:30vh">
+            <div class="carousel-caption user-carousel-caption">
+              <h5>Mistery Lane</h5>
+              <p>On hold</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/NotFound.png" alt="Game 1" class="d-block mx-auto" style="height:30vh">
+            <div class="carousel-caption user-carousel-caption">
+              <h5>Spring Rain</h5>
+              <p>Abandoned in late development, possibly haunted</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/NotFound.png" alt="Game 1" class="d-block mx-auto" style="height:30vh">
+            <div class="carousel-caption user-carousel-caption">
+              <h5>Last Memories</h5>
+              <p>Abandoned in late development, possibly haunted</p>
+            </div>
+        </div>
+
+      <!-- Left and right controls/icons -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#userCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#userCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+      </button>
+    
+        <!-- close carousel-inner -->  
+        </div>
+
+      <!-- close userCarousel -->  
+      </div>
+
+
   </div>
-</main>
+  
+  <div class="col"></div>
+</div>
+
+
 
 <%- include('partials/footer'); %>
   
-</div>
-</body>
-</html>
+<%- include('partials/body-div_closing'); %>

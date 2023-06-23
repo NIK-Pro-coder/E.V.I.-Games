@@ -1,27 +1,39 @@
 <!-- views/partials/header.ejs -->
 
-  <header class="mb-auto">
-    <div>
-      <nav class="nav nav-masthead justify-content-center float-md-end">
-      <% if (navlink == "home") { %>
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
-      <%} else { %>
-          <a class="nav-link" href="/">Home</a>
-      <% } %>
-      
-      <% if (navlink == "games") { %>
-          <a class="nav-link active" aria-current="page" href="/games">Games</a>
-      <%} else { %>
-          <a class="nav-link" href="/games">Games</a>
-      <% } %>
-      
-      <% if (navlink == "recover") { %>
-          <a class="nav-link active" aria-current="page" href="/recover">Recover</a>
-      <%} else { %>
-          <a class="nav-link" href="/recover">Recover</a>
-      <% } %>
 
-      </nav>
-    </div>
-  </header>
+
+<div class="row pt-3 pb-5">
+<header>
+<div class="col-sm-12">
+  <nav class="nav nav-masthead justify-content-center float-md-end">
+  
+  <% if (navlink == "home") { %>
+      <a class="nav-link active" aria-current="page" href="/">Home</a>
+  <%} else { %>
+      <a class="nav-link" href="/">Home</a>
+  <% } %>
+  
+  <% if (navlink == "games") { %>
+      <a class="nav-link active" aria-current="page" href="/games">Games</a>
+  <%} else { %>
+      <a class="nav-link" href="/games">Games</a>
+  <% } %>
+  
+  <% if (navlink == "recover") { %>
+      <a class="nav-link active" aria-current="page" href="/recover">Recover</a>
+  <%} else { %>
+      <a class="nav-link" href="/recover">Recover</a>
+  <% } %>
+  
+  <% if (navlink == "login") { %>
+      <a class="nav-link active" aria-current="page" href="/login">Login</a>
+  <%} else { %>
+      <a class="nav-link" href="/login">Login</a>
+  <% } %>
+
+  </nav>
+</div>
+</header>
+</div>
+
 

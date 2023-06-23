@@ -1,0 +1,52 @@
+<!-- views/login.ejs -->
+
+<%- include('partials/head'); %>
+
+<%- include('partials/body-div_opening'); %>
+
+<%- include('partials/header'); %>
+
+<div class="row pt-3 pb-5">
+  <div class="col">
+    <h1>Login</h1>
+    <% if (typeof message !== 'undefined') { %>
+    <div class="alert <%= messageClass %>" role="alert"><%= messageClass %></div>
+    <% } %>
+  </div>
+</div>
+
+<form method="POST" action="/login">
+<div class="row pt-3 pb-5">
+
+  <div class="col-sm-4 text-end">Clearance Level :</div>
+
+  <div class="col-sm-4">
+    <input name="level" type="text" class="form-control" id="exampleInputLevel" placeholder="Enter Clearance Level">
+  </div>
+  <div class="col-sm"></div>
+</div>
+
+<div class="row pt-3 pb-5">
+
+  <div class="col-sm-4 text-end">Password :</div>
+
+  <div class="col-sm-4">
+        <input name="password" type="password" class="form-control" id="exampleInputPassword" placeholder="Enter Password">
+  </div>
+  <div class="col-sm"></div>
+</div>
+
+<div class="row pt-3 pb-5">
+  <div class="col-sm">
+    <button type="submit" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Access Protected System</button>
+  </div>
+</div>
+</form>
+
+
+
+
+
+<%- include('partials/footer'); %>
+
+<%- include('partials/body-div_closing'); %>
